@@ -1,0 +1,8 @@
+micronaut:
+  application:
+    name: producer_nats
+
+
+nats:
+  addresses:
+    - "nats://localhost:4222"

@@ -1,0 +1,21 @@
+micronaut:
+  application:
+    name: consumer_nats
+  server:
+    port: 8081
+
+
+nats:
+  addresses:
+    - "nats://localhost:4222"
+
+
+#Cassandra
+cassandra:
+  default:
+    basic:
+      contact-points:
+        - ${cassandra_contact_points:localhost}
+      session-keyspace: "mykeyspace"
+      load-balancing-policy:
+        local-datacenter: ${cassandra_local_datacenter:datacenter1}

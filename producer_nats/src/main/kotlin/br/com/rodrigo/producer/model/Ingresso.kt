@@ -1,4 +1,4 @@
-package br.com.zup.rodrigo.model
+package br.com.rodrigo.producer.model
 
 import java.math.BigDecimal
 import java.time.LocalDate

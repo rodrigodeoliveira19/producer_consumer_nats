@@ -1,8 +1,8 @@
-package br.com.zup.rodrigo.service.imp
+package br.com.rodrigo.producer.service.imp
 
 import br.com.rodrigo.producer.infra.IngressoClient
 import br.com.rodrigo.producer.service.IngressoService
-import br.com.zup.rodrigo.model.Ingresso
+import br.com.rodrigo.producer.model.Ingresso
 import jakarta.inject.Singleton
 import java.util.*
 

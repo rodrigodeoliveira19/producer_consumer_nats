@@ -2,7 +2,7 @@ package br.com.rodrigo.consumer.repository.scylla.imp
 
 
 import br.com.rodrigo.consumer.model.Ingresso
-import br.com.zup.rodrigo.repository.scylla.IngressoRepository
+import br.com.rodrigo.consumer.repository.scylla.IngressoRepository
 import com.datastax.oss.driver.api.core.CqlSession
 import com.datastax.oss.driver.api.core.cql.SimpleStatement
 import jakarta.inject.Singleton

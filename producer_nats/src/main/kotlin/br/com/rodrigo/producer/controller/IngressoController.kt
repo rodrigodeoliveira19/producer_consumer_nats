@@ -1,7 +1,7 @@
-package br.com.zup.rodrigo.producer.controller
+package br.com.rodrigo.producer.controller
 
+import br.com.rodrigo.producer.controller.dto.IngressoRequest
 import br.com.rodrigo.producer.service.IngressoService
-import br.com.zup.rodrigo.dto.IngressoRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.*
 import io.micronaut.validation.Validated

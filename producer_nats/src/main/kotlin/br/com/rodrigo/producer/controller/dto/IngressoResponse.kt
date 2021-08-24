@@ -1,6 +1,6 @@
-package br.com.zup.rodrigo.dto
+package br.com.rodrigo.producer.controller.dto
 
-import br.com.zup.rodrigo.model.Ingresso
+import br.com.rodrigo.producer.model.Ingresso
 
 class IngressoResponse(ingresso: Ingresso) {
 

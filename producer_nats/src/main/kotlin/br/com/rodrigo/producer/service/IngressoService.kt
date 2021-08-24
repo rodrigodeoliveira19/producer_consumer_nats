@@ -1,6 +1,6 @@
 package br.com.rodrigo.producer.service
 
-import br.com.zup.rodrigo.model.Ingresso
+import br.com.rodrigo.producer.model.Ingresso
 
 interface IngressoService {
 

@@ -1,7 +1,7 @@
-package br.com.zup.rodrigo.dto
+package br.com.rodrigo.producer.controller.dto
 
 
-import br.com.zup.rodrigo.model.Ingresso
+import br.com.rodrigo.producer.model.Ingresso
 import io.micronaut.core.annotation.Introspected
 import io.micronaut.core.convert.format.Format
 import java.math.BigDecimal

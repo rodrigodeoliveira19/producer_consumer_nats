@@ -1,9 +1,9 @@
-package br.com.zup.rodrigo.service.imp
+package br.com.rodrigo.consumer.service.imp
 
 
 import br.com.rodrigo.consumer.model.Ingresso
 import br.com.rodrigo.consumer.service.IngressoService
-import br.com.zup.rodrigo.repository.scylla.IngressoRepository
+import br.com.rodrigo.consumer.repository.scylla.IngressoRepository
 
 import jakarta.inject.Singleton
 import java.util.*

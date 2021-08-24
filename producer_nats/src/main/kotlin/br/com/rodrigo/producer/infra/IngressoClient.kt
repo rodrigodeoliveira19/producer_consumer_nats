@@ -1,6 +1,6 @@
 package br.com.rodrigo.producer.infra
 
-import br.com.zup.rodrigo.model.Ingresso
+import br.com.rodrigo.producer.model.Ingresso
 import io.micronaut.http.annotation.Body
 import io.micronaut.nats.annotation.NatsClient
 import io.micronaut.nats.annotation.Subject
@@ -13,7 +13,7 @@ interface IngressoClient {
     fun cadastrar(@Body ingresso: Ingresso)
 
     @Subject("put_ingresso")
-    fun atualizar(ingresso : Pair<UUID, Ingresso>)
+    fun atualizar(ingresso: Pair<UUID, Ingresso>)
 
     @Subject("delete_ingresso")
     fun deletar(id: UUID)

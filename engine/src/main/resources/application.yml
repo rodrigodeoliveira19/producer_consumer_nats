@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: engine
+  server:
+    port: 8082
+
+
+#Cassandra
+cassandra:
+  default:
+    basic:
+      contact-points:
+        - ${cassandra_contact_points:localhost}
+      session-keyspace: "mykeyspace"
+      load-balancing-policy:
+        local-datacenter: ${cassandra_local_datacenter:datacenter1}

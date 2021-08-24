@@ -38,6 +38,9 @@ dependencies {
     //Nats
     implementation("io.micronaut.nats:micronaut-nats")
 
+    //Health
+    implementation("io.micronaut:micronaut-management")
+
 }
 
 

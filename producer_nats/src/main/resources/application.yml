@@ -6,3 +6,4 @@ micronaut:
 nats:
   addresses:
     - "nats://localhost:4222"
+

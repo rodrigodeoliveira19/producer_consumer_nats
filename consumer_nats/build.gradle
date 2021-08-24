@@ -42,6 +42,9 @@ dependencies {
     implementation group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '3.10.2'
     implementation("io.micronaut.cassandra:micronaut-cassandra")
 
+    //Health
+    implementation("io.micronaut:micronaut-management")
+
 }
 
 

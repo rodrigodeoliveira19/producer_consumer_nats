@@ -1,6 +1,6 @@
-package br.com.rodrigo.producer.infra
+package br.com.rodrigo.producer.infrastructure.client
 
-import br.com.rodrigo.producer.model.Ingresso
+import br.com.rodrigo.producer.core.model.Ingresso
 import io.micronaut.http.annotation.Body
 import io.micronaut.nats.annotation.NatsClient
 import io.micronaut.nats.annotation.Subject

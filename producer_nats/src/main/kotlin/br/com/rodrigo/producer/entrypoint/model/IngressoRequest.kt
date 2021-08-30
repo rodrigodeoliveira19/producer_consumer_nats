@@ -1,7 +1,6 @@
-package br.com.rodrigo.producer.controller.dto
+package br.com.rodrigo.producer.entrypoint.model
 
 
-import br.com.rodrigo.producer.model.Ingresso
 import io.micronaut.core.annotation.Introspected
 import io.micronaut.core.convert.format.Format
 import java.math.BigDecimal
@@ -17,14 +16,5 @@ class IngressoRequest(
     @Format("yyyy/MM/dd")
     val dataEvento: LocalDate
 ) {
-
-    fun ToModel(): Ingresso {
-        return Ingresso(
-            descricao = descricao,
-            valor = valor,
-            endereco = endereco,
-            dataEvento = dataEvento
-        )
-    }
 
 }

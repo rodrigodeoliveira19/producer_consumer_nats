@@ -1,7 +1,8 @@
-package br.com.rodrigo.producer.controller
+package br.com.rodrigo.producer.entrypoint.inbound
 
-import br.com.rodrigo.producer.controller.dto.IngressoRequest
-import br.com.rodrigo.producer.service.IngressoService
+import br.com.rodrigo.producer.core.mapper.IngressoConverter
+import br.com.rodrigo.producer.entrypoint.model.IngressoRequest
+import br.com.rodrigo.producer.core.ports.IngressoServicePort
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.*
 import io.micronaut.validation.Validated
@@ -9,21 +10,19 @@ import javax.validation.Valid
 
 @Validated
 @Controller("/ingressos")
-class IngressoController(private val ingressoService: IngressoService) {
+class IngressoController(private val ingressoService: IngressoServicePort) {
 
     @Post
     fun cadastrar(@Body @Valid ingressoRequest: IngressoRequest): HttpResponse<Any> {
-        val ingresso = ingressoRequest.ToModel()
-        ingressoService.cadastrar(ingresso)
+        ingressoService.cadastrar(IngressoConverter.ingressoRequestToIngresso(ingressoRequest))
         return HttpResponse.ok()
     }
 
     @Put("/{id}")
     fun atualizar(@PathVariable id: String, @Body @Valid ingressoRequest: IngressoRequest)
             : HttpResponse<Any> {
-
-        val ingresso = ingressoRequest.ToModel()
-        ingressoService.atualizar(id, ingresso)
+        
+        ingressoService.atualizar(id, IngressoConverter.ingressoRequestToIngresso(ingressoRequest))
         return HttpResponse.ok()
     }
 

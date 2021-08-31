@@ -1,10 +1,10 @@
-package br.com.rodrigo.consumer.service
+package br.com.rodrigo.consumer.core.ports
 
-import br.com.rodrigo.consumer.model.Ingresso
+import br.com.rodrigo.consumer.core.model.Ingresso
 import java.util.*
 
 
-interface IngressoService {
+interface IngressoServicePort {
 
     fun cadastrar(ingresso: Ingresso)
 

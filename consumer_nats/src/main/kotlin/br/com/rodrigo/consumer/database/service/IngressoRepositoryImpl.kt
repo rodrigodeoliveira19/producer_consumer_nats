@@ -2,7 +2,7 @@ package br.com.rodrigo.consumer.database.service
 
 
 import br.com.rodrigo.consumer.core.ports.IngressoRepositoryPort
-import br.com.rodrigo.consumer.core.model.IngressoEntity
+import br.com.rodrigo.consumer.database.model.IngressoEntity
 import com.datastax.oss.driver.api.core.CqlSession
 import com.datastax.oss.driver.api.core.cql.SimpleStatement
 import jakarta.inject.Singleton

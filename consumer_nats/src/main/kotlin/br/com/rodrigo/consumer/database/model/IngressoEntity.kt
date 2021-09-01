@@ -1,4 +1,4 @@
-package br.com.rodrigo.consumer.core.model
+package br.com.rodrigo.consumer.database.model
 
 import java.math.BigDecimal
 import java.time.LocalDate

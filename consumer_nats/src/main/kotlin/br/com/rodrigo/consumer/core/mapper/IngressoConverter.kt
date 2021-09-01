@@ -1,7 +1,7 @@
 package br.com.rodrigo.consumer.core.mapper
 
 import br.com.rodrigo.consumer.core.model.Ingresso
-import br.com.rodrigo.consumer.core.model.IngressoEntity
+import br.com.rodrigo.consumer.database.model.IngressoEntity
 import br.com.rodrigo.consumer.infrastructure.model.IngressoEvent
 
 class IngressoConverter {

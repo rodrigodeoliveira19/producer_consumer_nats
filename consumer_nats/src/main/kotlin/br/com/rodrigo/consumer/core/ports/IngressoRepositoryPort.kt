@@ -1,7 +1,7 @@
 package br.com.rodrigo.consumer.core.ports
 
 
-import br.com.rodrigo.consumer.core.model.IngressoEntity
+import br.com.rodrigo.consumer.database.model.IngressoEntity
 import java.util.*
 
 interface IngressoRepositoryPort {

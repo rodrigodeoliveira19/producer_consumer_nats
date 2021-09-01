@@ -1,8 +1,9 @@
-package br.com.rodrigo.engine.repository.scylla.imp
+package br.com.rodrigo.engine.database.service
 
 
-import br.com.rodrigo.engine.model.Ingresso
-import br.com.rodrigo.engine.repository.scylla.IngressoRepository
+import br.com.rodrigo.engine.core.model.Ingresso
+import br.com.rodrigo.engine.core.ports.IngressoRepository
+import br.com.rodrigo.engine.database.model.IngressoEntity
 import com.datastax.oss.driver.api.core.CqlSession
 import com.datastax.oss.driver.api.core.cql.SimpleStatement
 import jakarta.inject.Singleton
@@ -11,13 +12,13 @@ import java.util.*
 @Singleton
 class IngressoRepositoryImpl(private val cqlSession: CqlSession) : IngressoRepository {
 
-    override fun buscarTodos(): List<Ingresso> {
+    override fun buscarTodos(): List<IngressoEntity> {
         val ingressos = cqlSession.execute(
             SimpleStatement.newInstance("select * from ingresso;")
         )
 
         return ingressos.map {
-            Ingresso(
+            IngressoEntity(
                 id = it.getUuid("ingresso_id"),
                 descricao = it.getString("descricao")!!,
                 valor = it.getBigDecimal("valor")!!,
@@ -27,13 +28,13 @@ class IngressoRepositoryImpl(private val cqlSession: CqlSession) : IngressoRepos
         }.toList()
     }
 
-    override fun buscarPorId(id: UUID): Ingresso? {
+    override fun buscarPorId(id: UUID): IngressoEntity? {
         val ingressos = cqlSession.execute(
             SimpleStatement.newInstance("select * from ingresso where ingresso_id =?;", id)
         )
 
         return ingressos.map {
-            Ingresso(
+            IngressoEntity(
                 id = it.getUuid("ingresso_id"),
                 descricao = it.getString("descricao")!!,
                 valor = it.getBigDecimal("valor")!!,

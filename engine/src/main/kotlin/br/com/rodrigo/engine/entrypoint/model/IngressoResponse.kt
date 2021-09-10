@@ -6,7 +6,7 @@ import java.util.*
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Positive
 
-class IngressoResponse(
+data class IngressoResponse(
     val id: UUID? = null,
     @field: NotBlank var descricao: String,
     @field: Positive var valor: BigDecimal,

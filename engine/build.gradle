@@ -15,7 +15,7 @@ repositories {
 
 micronaut {
     runtime("netty")
-    testRuntime("junit5")
+    testRuntime("Kotest")
     processing {
         incremental(true)
         annotations("br.com.rodrigo.engine.*")
@@ -63,6 +63,9 @@ tasks {
             jvmTarget = "11"
         }
     }
-
-
 }
+
+test {
+    useJUnitPlatform()
+}
+
